@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" minHeight="670.0" minWidth="500.0" prefWidth="500.0" spacing="20.0" style="-fx-background-image: url(&quot;https://i.pinimg.com/564x/13/33/b7/1333b76ae2457f1bfc963d2e7d172fcc.jpg&quot;);" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nl.miw.groningen.ch9.sevenWonders.emiel.controller.FinalScoreController">
+   <children>
+      <ImageView fx:id="logoimage" fitHeight="272.0" fitWidth="373.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/sevenWondersLogo.png" />
+         </image>
+         <VBox.margin>
+            <Insets top="30.0" />
+         </VBox.margin></ImageView>
+      <StackPane prefHeight="415.0" prefWidth="401.0">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2a9c8f" height="432.0" opacity="0.9" strokeType="INSIDE" strokeWidth="15.0" width="455.0">
+               <stroke>
+                  <LinearGradient endX="0.4881516587677725" endY="0.48815165876777256">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.800000011920929" green="0.7353333234786987" blue="0.024000000208616257" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.5134133100509644" green="0.5199999809265137" blue="0.12479999661445618" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </stroke>
+            </Rectangle>
+            <Label fx:id="winnerLabel" alignment="CENTER" cache="true" contentDisplay="TOP" prefHeight="340.0" prefWidth="413.0" text="?" textAlignment="CENTER" wrapText="true">
+               <font>
+                  <Font name="Averia-Bold" size="69.0" />
+               </font>
+            </Label>
+         </children>
+      </StackPane>
+      <Button fx:id="primaryButton" onAction="#switchToMenu" opacity="0.9" text="Menu">
+         <font>
+            <Font name="Averia-Regular" size="25.0" />
+         </font>
+         <VBox.margin>
+            <Insets bottom="20.0" />
+         </VBox.margin></Button>
+   </children>
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
+</VBox>

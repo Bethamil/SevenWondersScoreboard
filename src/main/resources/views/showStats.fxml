@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="CENTER" minHeight="670.0" minWidth="500.0" prefWidth="500.0" spacing="20.0" style="-fx-background-image: url(&quot;https://i.pinimg.com/564x/13/33/b7/1333b76ae2457f1bfc963d2e7d172fcc.jpg&quot;);" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nl.miw.groningen.ch9.sevenWonders.emiel.controller.StatsController">
+   <children>
+      <ImageView fx:id="logoimage" fitHeight="272.0" fitWidth="373.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/sevenWondersLogo.png" />
+         </image>
+         <VBox.margin>
+            <Insets top="30.0" />
+         </VBox.margin></ImageView>
+      <StackPane prefHeight="0.0" prefWidth="460.0">
+         <children>
+            <HBox alignment="TOP_CENTER" prefHeight="66.0" prefWidth="460.0">
+               <children>
+                  <ChoiceBox fx:id="nameBox" prefHeight="33.0" prefWidth="150.0" />
+                  <Separator orientation="VERTICAL" prefHeight="0.0" prefWidth="60.0" />
+                  <Button fx:id="showStatsButton" onAction="#getStatsByChosenPlayer" opacity="0.9" prefHeight="26.0" prefWidth="151.0" text="show stats">
+                     <font>
+                        <Font name="Averia-Regular" size="19.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </StackPane>
+      <StackPane prefHeight="150.0" prefWidth="200.0">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2a9c8f" height="309.0" opacity="0.9" strokeType="INSIDE" strokeWidth="15.0" width="455.0">
+               <stroke>
+                  <LinearGradient endX="0.4881516587677725" endY="0.48815165876777256">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.800000011920929" green="0.7353333234786987" blue="0.024000000208616257" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.5134133100509644" green="0.5199999809265137" blue="0.12479999661445618" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </stroke>
+            </Rectangle>
+            <StackPane fx:id="statPlayerPanel" prefHeight="359.0" prefWidth="460.0" visible="false">
+               <children>
+                  <VBox alignment="CENTER_LEFT" maxWidth="400.0" prefHeight="432.0" prefWidth="400.0">
+                     <children>
+                        <HBox alignment="CENTER_LEFT" maxHeight="45.0" prefHeight="45.0" prefWidth="378.0">
+                           <children>
+                              <Label alignment="TOP_LEFT" prefHeight="38.0" prefWidth="344.0" text="Total games played:" wrapText="true">
+                                 <font>
+                                    <Font name="Averia-Regular" size="33.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="infoLabelTotal" alignment="CENTER" prefHeight="38.0" prefWidth="42.0" text="?" textAlignment="CENTER" wrapText="true">
+                                 <font>
+                                    <Font name="Averia-Regular" size="33.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="49.0" prefWidth="400.0">
+                           <children>
+                              <Label alignment="TOP_LEFT" prefHeight="38.0" prefWidth="344.0" text="Total games won" wrapText="true">
+                                 <font>
+                                    <Font name="Averia-Regular" size="33.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="infoLabelTotalWon" alignment="CENTER" prefWidth="42.0" text="?" wrapText="true">
+                                 <font>
+                                    <Font name="Averia-Regular" size="33.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <Separator opacity="0.52" prefHeight="24.0" prefWidth="460.0" />
+                        <HBox prefHeight="35.0" prefWidth="400.0">
+                           <children>
+                              <Label alignment="TOP_LEFT" prefHeight="23.0" prefWidth="344.0" text="Won By War: " wrapText="true">
+                                 <font>
+                                    <Font name="Averia-Regular" size="25.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="infoLabelWar" alignment="CENTER" prefWidth="42.0" text="?" wrapText="true">
+                                 <font>
+                                    <Font name="Averia-Regular" size="25.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="35.0" prefWidth="400.0">
+                           <children>
+                              <Label alignment="TOP_LEFT" prefHeight="23.0" prefWidth="344.0" text="Won by Science" wrapText="true">
+                                 <font>
+                                    <Font name="Averia-Regular" size="25.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="infoLabelScience" alignment="CENTER" prefWidth="42.0" text="?" wrapText="true">
+                                 <font>
+                                    <Font name="Averia-Regular" size="25.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="35.0" prefWidth="400.0">
+                           <children>
+                              <Label alignment="TOP_LEFT" prefHeight="23.0" prefWidth="344.0" text="Won by Points" wrapText="true">
+                                 <font>
+                                    <Font name="Averia-Regular" size="25.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="infoLabelPoints" alignment="CENTER" prefWidth="42.0" text="?" textAlignment="CENTER" wrapText="true">
+                                 <font>
+                                    <Font name="Averia-Regular" size="25.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </StackPane>
+            <StackPane fx:id="statLast2MatchesPanel" prefHeight="359.0" prefWidth="460.0">
+               <children>
+                  <VBox maxHeight="270.0" maxWidth="415.0" prefHeight="254.0" prefWidth="415.0">
+                     <children>
+                        <Label fx:id="labelLast2Matches1" alignment="CENTER" contentDisplay="CENTER" prefHeight="154.0" prefWidth="414.0" text="?" textAlignment="CENTER">
+                           <font>
+                              <Font name="Averia-Regular" size="25.0" />
+                           </font>
+                        </Label>
+                        <Separator opacity="0.7" prefWidth="200.0" />
+                        <Label fx:id="labelLast2Matches2" alignment="CENTER" contentDisplay="CENTER" prefHeight="143.0" prefWidth="445.0" text="?" textAlignment="CENTER">
+                           <font>
+                              <Font name="Averia-Regular" size="25.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+               </children>
+            </StackPane>
+         </children>
+      </StackPane>
+      <Separator opacity="0.0" prefHeight="24.0" prefWidth="460.0" />
+      <HBox alignment="CENTER" prefHeight="0.0" prefWidth="460.0">
+         <children>
+            <Button fx:id="primaryButton" onAction="#switchToMenu" opacity="0.9" prefWidth="180.0" text="Back">
+               <font>
+                  <Font name="Averia-Regular" size="25.0" />
+               </font>
+            </Button>
+            <Separator opacity="0.7" orientation="VERTICAL" prefHeight="45.0" prefWidth="50.0" />
+            <Button fx:id="lastMatchesButton" onAction="#showLast2Matches" opacity="0.9" prefHeight="45.0" prefWidth="180.0" text="last matches">
+               <font>
+                  <Font name="Averia-Regular" size="25.0" />
+               </font>
+            </Button>
+         </children>
+      </HBox>
+   </children>
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
+</VBox>

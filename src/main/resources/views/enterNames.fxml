@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" minHeight="670.0" minWidth="500.0" prefWidth="500.0" spacing="20.0" style="-fx-background-image: url(&quot;https://i.pinimg.com/564x/13/33/b7/1333b76ae2457f1bfc963d2e7d172fcc.jpg&quot;);" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nl.miw.groningen.ch9.sevenWonders.emiel.controller.EnterNameController">
+   <children>
+      <ImageView fx:id="logoimage" fitHeight="272.0" fitWidth="373.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/sevenWondersLogo.png" />
+         </image>
+         <VBox.margin>
+            <Insets top="30.0" />
+         </VBox.margin></ImageView>
+      <TextField fx:id="enterNameTextField" alignment="CENTER" maxWidth="250.0" prefHeight="25.0" prefWidth="250.0" promptText="name">
+         <font>
+            <Font name="Averia-Regular" size="25.0" />
+         </font>
+      </TextField>
+      <Button fx:id="addNameButton" onAction="#addNameToDB" opacity="0.9" text="Add Name">
+         <font>
+            <Font name="Averia-Regular" size="25.0" />
+         </font>
+      </Button>
+      <Label fx:id="infoLabel">
+         <font>
+            <Font name="Averia-Regular" size="25.0" />
+         </font>
+      </Label>
+      <Separator opacity="0.0" prefHeight="180.0" prefWidth="460.0" />
+      <Button fx:id="primaryButton" onAction="#switchToMenu" opacity="0.9" text="Back">
+         <font>
+            <Font name="Averia-Regular" size="25.0" />
+         </font>
+         <VBox.margin>
+            <Insets bottom="20.0" />
+         </VBox.margin></Button>
+   </children>
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
+</VBox>

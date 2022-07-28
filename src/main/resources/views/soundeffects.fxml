@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" minHeight="670.0" minWidth="500.0" prefWidth="500.0" spacing="20.0" style="-fx-background-image: url(&quot;https://i.pinimg.com/564x/13/33/b7/1333b76ae2457f1bfc963d2e7d172fcc.jpg&quot;);" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nl.miw.groningen.ch9.sevenWonders.emiel.controller.SoundEffectsController">
+   <children>
+      <ImageView fx:id="logoimage" fitHeight="272.0" fitWidth="373.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/sevenWondersLogo.png" />
+         </image>
+         <VBox.margin>
+            <Insets top="30.0" />
+         </VBox.margin></ImageView>
+      <Label prefHeight="41.0" prefWidth="92.0" text="War">
+         <font>
+            <Font name="Averia-Regular" size="43.0" />
+         </font>
+      </Label>
+      <HBox alignment="CENTER" prefHeight="32.0" prefWidth="460.0">
+         <children>
+            <Button alignment="CENTER" minWidth="-Infinity" mnemonicParsing="false" onAction="#warHorn" opacity="0.9" prefHeight="44.0" prefWidth="150.0" text="Horn" textAlignment="CENTER">
+               <font>
+                  <Font name="Averia-Regular" size="23.0" />
+               </font>
+            </Button>
+            <Separator opacity="0.9" orientation="VERTICAL" prefHeight="49.0" prefWidth="50.0" />
+            <Button minWidth="-Infinity" mnemonicParsing="false" onAction="#warDrum" opacity="0.9" prefHeight="44.0" prefWidth="150.0" text="Drums" textAlignment="CENTER">
+               <font>
+                  <Font name="Averia-Regular" size="23.0" />
+               </font>
+            </Button>
+            <Separator opacity="0.9" orientation="VERTICAL" prefHeight="49.0" prefWidth="50.0" />
+            <Button alignment="CENTER" minWidth="-Infinity" mnemonicParsing="false" onAction="#warFight" opacity="0.9" prefHeight="44.0" prefWidth="150.0" text="Fight" textAlignment="CENTER">
+               <font>
+                  <Font name="Averia-Regular" size="23.0" />
+               </font>
+            </Button>
+         </children>
+      </HBox>
+      <Label prefHeight="49.0" prefWidth="151.0" text="Science">
+         <font>
+            <Font name="Averia-Regular" size="43.0" />
+         </font>
+      </Label>
+      <HBox alignment="CENTER" prefHeight="32.0" prefWidth="460.0">
+         <children>
+            <Button alignment="CENTER" minWidth="-Infinity" mnemonicParsing="false" onAction="#scienceAccelerator" opacity="0.9" prefHeight="42.0" prefWidth="150.0" text="Accelerator" textAlignment="CENTER">
+               <font>
+                  <Font name="Averia-Regular" size="23.0" />
+               </font>
+            </Button>
+            <Separator opacity="0.9" orientation="VERTICAL" prefHeight="49.0" prefWidth="50.0" />
+            <Button minWidth="-Infinity" mnemonicParsing="false" onAction="#scienceSine" opacity="0.9" prefHeight="44.0" prefWidth="150.0" text="Sine Sweep" textAlignment="CENTER">
+               <font>
+                  <Font name="Averia-Regular" size="23.0" />
+               </font>
+            </Button>
+            <Separator opacity="0.9" orientation="VERTICAL" prefHeight="49.0" prefWidth="50.0" />
+            <Button minWidth="-Infinity" mnemonicParsing="false" onAction="#scienceMachine" opacity="0.9" prefHeight="44.0" prefWidth="150.0" text="Machine" textAlignment="CENTER">
+               <font>
+                  <Font name="Averia-Regular" size="23.0" />
+               </font>
+            </Button>
+         </children>
+      </HBox>
+      <Label alignment="CENTER" prefHeight="49.0" prefWidth="151.0" text="Other" textAlignment="CENTER">
+         <font>
+            <Font name="Averia-Regular" size="43.0" />
+         </font>
+      </Label>
+      <HBox alignment="CENTER" prefHeight="32.0" prefWidth="460.0">
+         <children>
+            <Button alignment="CENTER" minWidth="-Infinity" mnemonicParsing="false" onAction="#otherFantasy" opacity="0.9" prefHeight="44.0" prefWidth="150.0" text="Fantasy" textAlignment="CENTER">
+               <font>
+                  <Font name="Averia-Regular" size="23.0" />
+               </font>
+            </Button>
+            <Separator opacity="0.9" orientation="VERTICAL" prefHeight="49.0" prefWidth="50.0" />
+            <Button minWidth="-Infinity" mnemonicParsing="false" onAction="#otherVictory" opacity="0.9" prefHeight="44.0" prefWidth="150.0" text="Victory" textAlignment="CENTER">
+               <font>
+                  <Font name="Averia-Regular" size="23.0" />
+               </font>
+            </Button>
+            <Separator opacity="0.9" orientation="VERTICAL" prefHeight="49.0" prefWidth="50.0" />
+            <Button minWidth="-Infinity" mnemonicParsing="false" onAction="#otherTrumpets" opacity="0.9" prefHeight="44.0" prefWidth="150.0" text="Trumpets" textAlignment="CENTER">
+               <font>
+                  <Font name="Averia-Regular" size="23.0" />
+               </font>
+            </Button>
+         </children>
+      </HBox>
+      <Separator opacity="0.0" prefHeight="0.0" prefWidth="460.0" />
+      <Button fx:id="primaryButton" onAction="#switchToMenu" opacity="0.9" text="Back">
+         <font>
+            <Font name="Averia-Regular" size="25.0" />
+         </font>
+         <VBox.margin>
+            <Insets bottom="20.0" />
+         </VBox.margin></Button>
+   </children>
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
+</VBox>

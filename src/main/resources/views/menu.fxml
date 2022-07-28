@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="CENTER" minHeight="670.0" minWidth="500.0" prefHeight="600.0" prefWidth="500.0" spacing="20.0" style="-fx-background-image: url(&quot;https://i.pinimg.com/564x/13/33/b7/1333b76ae2457f1bfc963d2e7d172fcc.jpg&quot;);" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nl.miw.groningen.ch9.sevenWonders.emiel.controller.MenuController">
+   <children>
+      <ImageView fx:id="logoimage" fitHeight="272.0" fitWidth="373.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/sevenWondersLogo.png" />
+         </image></ImageView>
+
+
+
+
+
+      <Label text="Scoreboard" textFill="#177246">
+         <font>
+            <Font name="Averia-Regular" size="49.0" />
+         </font></Label>
+      <Button fx:id="primaryButton" onAction="#switchToEnterScores" opacity="0.9" text="Enter new score">
+         <font>
+            <Font name="Averia-Regular" size="25.0" />
+         </font></Button>
+      <Button mnemonicParsing="false" onAction="#switchToEnterNames" opacity="0.9" text="Enter names">
+         <font>
+            <Font name="Averia-Regular" size="25.0" />
+         </font></Button>
+      <Button fx:id="showStats" mnemonicParsing="false" onAction="#switchToShowStats" opacity="0.9" text="Show stats">
+         <font>
+            <Font name="Averia-Regular" size="25.0" />
+         </font></Button>
+      <Button fx:id="switchToSoundeffects" mnemonicParsing="false" onAction="#switchToSoundeffects" opacity="0.9" text="Sound Effects">
+         <font>
+            <Font name="Averia-Regular" size="25.0" />
+         </font></Button>
+   </children>
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
+</VBox>
