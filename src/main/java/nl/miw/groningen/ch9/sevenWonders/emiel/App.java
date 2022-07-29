@@ -50,7 +50,7 @@ public class App extends Application {
         }
     }
 
-    public static void showLast2Matches() {
+    public static void showLast2Matches() throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("/views/showStats.fxml"));
         try {
             Parent parent = fxmlLoader.load();

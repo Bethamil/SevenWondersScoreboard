@@ -65,7 +65,13 @@ public class StatsController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        String[] names = App.getAllPlayersForChoiceBox();
-        nameBox.getItems().addAll(names);
+        try {
+            String[] names = App.getAllPlayersForChoiceBox();
+            nameBox.getItems().addAll(names);
+        } catch (NullPointerException n) {
+            System.out.println("SQL error" + n.getMessage());
+            labelLast2Matches1.setText("SQL Error");
+        }
+
     }
 }

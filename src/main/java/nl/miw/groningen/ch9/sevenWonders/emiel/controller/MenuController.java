@@ -13,9 +13,8 @@ import java.io.IOException;
 public class MenuController {
     @FXML
     private void switchToEnterScores() throws IOException {
-        App.setRoot("enterscores");
+        App.setRoot("enterScores");
     }
-
     @FXML
     private void switchToEnterNames() throws IOException {
         App.setRoot("enterNames");
@@ -29,7 +28,6 @@ public class MenuController {
             App.setRoot("showStats");
         }
     }
-
     @FXML
     private void switchToSoundeffects() throws IOException {
         App.setRoot("soundeffects");
