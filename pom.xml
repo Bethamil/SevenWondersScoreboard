@@ -73,7 +73,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>nl.miw.groningen.ch9.sevenWonders.emiel.App</mainClass>
+                            <mainClass>nl.miw.groningen.ch9.sevenWonders.emiel.NewMain</mainClass>
                         </manifest>
                     </archive>
                     <descriptorRefs>
