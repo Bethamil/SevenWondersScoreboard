@@ -23,6 +23,8 @@ CONSTRAINT `fk_gameresults_winner`
     REFERENCES `SevenWondersScoreboard`.`players` (`name`)
 );
 
+INSERT INTO SevenWondersScoreboard.players (`name`) VALUES ('Unknown');
+
 CREATE USER 'admin'@'localhost' IDENTIFIED BY 'password';
 GRANT ALL PRIVILEGES ON SevenWondersScoreboard.* TO 'admin'@'localhost';
 
